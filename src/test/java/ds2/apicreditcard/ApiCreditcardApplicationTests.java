@@ -9,5 +9,6 @@ class ApiCreditcardApplicationTests {
     @Test
     void contextLoads() {
     }
+    // JQuery para teste
 
 }
