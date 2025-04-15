@@ -8,5 +8,5 @@ import org.springframework.web.bind.annotation.RestController;
 @RestController
 @RequestMapping("/api/cartao")
 public class CartaoController {
-
+ // get all e etc
 }
