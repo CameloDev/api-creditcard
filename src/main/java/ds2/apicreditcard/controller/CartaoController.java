@@ -29,4 +29,13 @@ public class CartaoController {
         var cartao = cartaoRepository.findById(Id);
         return cartao.stream().findFirst().map(ResponseEntity::ok).orElseGet(() -> ResponseEntity.notFound().build());
     }
+    @PutMapping
+    public ResponseEntity<Cartao> atualizarCartao(Cartao cartao) {
+        return ResponseEntity.ok(cartaoRepository.save(cartao));
+    }
+    @DeleteMapping
+    public ResponseEntity<Void> removerCartao(@Valid @RequestBody Cartao cartao) {
+        cartaoRepository.delete(cartao);
+        return ResponseEntity.noContent().build();
+    }
 }
