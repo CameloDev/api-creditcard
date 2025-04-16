@@ -6,6 +6,7 @@ import jakarta.validation.Valid;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 
+import java.util.List;
 import java.util.Optional;
 
 @RestController
@@ -50,6 +51,17 @@ public class CartaoController {
         return ResponseEntity.noContent().build();
         /*
         Deleta caso o cartao for da pessoa, e nao tiver limite que precisa pagar ainda e etc
+         */
+    }
+    @GetMapping
+    public ResponseEntity<List<Cartao>> listarCartao() {
+        return ResponseEntity.ok(cartaoRepository.findAll());
+        /*
+        esse metodo lista todos os cartoes na tabela sem muitas referencias,
+        iremos mudar para ele liste todos os cartoes daquele cliente,
+        lembrando que tem que ser os cartoes ativos,
+        iremos mexer na parte de security apenas para pegar esse cliente,
+        e um security filter para casos especificos de Administração do banco
          */
     }
 
