@@ -9,5 +9,7 @@ public class ApiCreditcardApplication {
     public static void main(String[] args) {
         SpringApplication.run(ApiCreditcardApplication.class, args);
     }
-
+    /*
+    aqui é parte que inicia o projeto :)
+     */
 }
