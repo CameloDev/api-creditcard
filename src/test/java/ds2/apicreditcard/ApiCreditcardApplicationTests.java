@@ -9,6 +9,8 @@ class ApiCreditcardApplicationTests {
     @Test
     void contextLoads() {
     }
-    // JQuery para teste
+    /*
+    Aqui é a parte para a criação de teste unitarios "programaveis" digamos assim
+     */
 
 }
