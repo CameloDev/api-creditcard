@@ -21,21 +21,36 @@ public class CartaoController {
     @PostMapping
     public ResponseEntity<Cartao> cadastrarCartao(Cartao cartao) {
         return ResponseEntity.ok(cartao);
-        // tem que fazer a validação de cadastro e etc, apenas uma base para comecar
+        /*
+         Tem que fazer a validação de cadastro e etc, apenas uma base para comecar
+         */
 
     }
     @GetMapping("/{id}")
     public ResponseEntity<Cartao> listarCartao(@PathVariable @Valid Long Id) {
         var cartao = cartaoRepository.findById(Id);
         return cartao.stream().findFirst().map(ResponseEntity::ok).orElseGet(() -> ResponseEntity.notFound().build());
+        /*
+        Aqui tem que verificar se o usuario é dono do cartao listado,
+        e fazer uma referencia que se caso ele nao for registrado
+        ele nao pode acessar esse endpoint o mesmo serve se a pessoa nao tiver cartao
+         */
     }
     @PutMapping
     public ResponseEntity<Cartao> atualizarCartao(Cartao cartao) {
         return ResponseEntity.ok(cartaoRepository.save(cartao));
+
+        /*
+        Atualiza caso a pessoa tiver esse cartao e etc + as restricoes do get
+         */
     }
     @DeleteMapping
     public ResponseEntity<Void> removerCartao(@Valid @RequestBody Cartao cartao) {
         cartaoRepository.delete(cartao);
         return ResponseEntity.noContent().build();
+        /*
+        Deleta caso o cartao for da pessoa, e nao tiver limite que precisa pagar ainda e etc
+         */
     }
+
 }
