@@ -1,7 +1,9 @@
 package ds2.apicreditcard.service;
 
 import ds2.apicreditcard.entity.Cartao;
+import org.springframework.stereotype.Service;
 
+@Service
 public class CartaoService {
 
     /*
