@@ -28,6 +28,8 @@ public class Fatura {
 
     private LocalDate data_vencimento;
     private LocalDate data_fechamento;
+
+    @Column(name = "status",nullable = false)
     private StatusFatura statusFatura;
 
 }
