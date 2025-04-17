@@ -2,23 +2,28 @@ package ds2.apicreditcard.entity;
 
 import ds2.apicreditcard.model.Bandeira;
 import ds2.apicreditcard.model.StatusCartao;
-import jakarta.persistence.GeneratedValue;
-import jakarta.persistence.GenerationType;
-import jakarta.persistence.Id;
-import jakarta.persistence.Table;
+import jakarta.persistence.*;
 import lombok.*;
 
 import java.time.LocalDate;
 
-@Table(name = "card")
+@Table(name = "cartoes")
 @Getter
 @Setter
 @AllArgsConstructor
 @NoArgsConstructor
+@Entity
 public class Cartao {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long cartao_id;
+
+    /*
+    @ManyToOne
+    @JoinColumn(name = "cliente_id")
+    private Client client
+    // ONDE VAI PRECISAR DO MODULO ACCOUNT
+     */
     private String numero;
     private String nome_impresso;
     private String cvv;
