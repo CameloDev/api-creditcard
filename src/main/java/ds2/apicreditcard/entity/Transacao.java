@@ -36,4 +36,5 @@ public class Transacao {
     private StatusTransacao statusTransacao;
 
 
+
 }
