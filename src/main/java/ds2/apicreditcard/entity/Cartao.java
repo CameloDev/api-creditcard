@@ -10,7 +10,7 @@ import lombok.*;
 
 import java.time.LocalDate;
 
-@Table(name = "card")
+@Table(name = "cartoes")
 @Getter
 @Setter
 @AllArgsConstructor
