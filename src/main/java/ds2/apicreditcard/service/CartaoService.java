@@ -1,11 +1,15 @@
 package ds2.apicreditcard.service;
 
 import ds2.apicreditcard.entity.Cartao;
+import ds2.apicreditcard.repository.CartaoRepository;
 import org.springframework.stereotype.Service;
 
 @Service
 public class CartaoService {
-
+    private final CartaoRepository cartaoRepository;
+    public CartaoService(CartaoRepository cartaoRepository) {
+        this.cartaoRepository = cartaoRepository;
+    }
     /*
     Aqui fica toda a logica do que sera no controller,
     para melhor explicação é tipo um POO,
