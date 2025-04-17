@@ -28,8 +28,10 @@ public class Pagamento {
     private float valor;
     private LocalDate data_pagamento;
 
+    @Column(name = "metodo",nullable = false)
     private MetodoPagamento metodoPagamento; // isso aqui vai juntar com External Payment
 
+    @Column(name = "status",nullable = false)
     private StatusPagamento statusPagamento;
 
 }

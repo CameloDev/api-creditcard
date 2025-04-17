@@ -24,7 +24,9 @@ public class HistoricoCartao {
     @JoinColumn(name = "cartao_id", nullable = false)
     private Cartao cartao;
 
+    @Column(name = "acao",nullable = false)
     private AcaoHistorico acaoHistorico;
+
     private String detalhes;
     private LocalDate data_alteracao;
 

@@ -1,5 +1,5 @@
 package ds2.apicreditcard.model;
 
-public enum Bandeira {
+public enum BandeiraCartao {
     visa, mastercard, elo, hipercard
 }

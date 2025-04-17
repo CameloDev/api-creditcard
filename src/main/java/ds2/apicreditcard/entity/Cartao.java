@@ -1,6 +1,6 @@
 package ds2.apicreditcard.entity;
 
-import ds2.apicreditcard.model.Bandeira;
+import ds2.apicreditcard.model.BandeiraCartao;
 import ds2.apicreditcard.model.StatusCartao;
 import jakarta.persistence.*;
 import lombok.*;
@@ -30,8 +30,13 @@ public class Cartao {
     private LocalDate data_validade;
     private Float limite_total;
     private Float limite_disponivel;
-    private Bandeira bandeira;
+
+    @Column(name = "bandeira",nullable = false)
+    private BandeiraCartao bandeiraCartao;
+
+    @Column(name = "status",nullable = false)
     private StatusCartao statusCartao;
+
     private Boolean aprovacao_automatica;
     private Boolean eh_adicional;
     private LocalDate data_emissao;
