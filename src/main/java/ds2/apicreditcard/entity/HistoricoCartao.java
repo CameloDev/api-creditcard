@@ -27,7 +27,9 @@ public class HistoricoCartao {
     @Column(name = "acao",nullable = false)
     private AcaoHistorico acaoHistorico;
 
+
     private String detalhes;
+
     private LocalDate data_alteracao;
 
 }
