@@ -28,6 +28,7 @@ public class HistoricoCartao {
     private AcaoHistorico acaoHistorico;
 
     private String detalhes;
+
     private LocalDate data_alteracao;
 
 }
